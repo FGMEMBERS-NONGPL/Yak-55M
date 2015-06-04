@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">CAK</name>
+            <texture>Yak-55M_CAK.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

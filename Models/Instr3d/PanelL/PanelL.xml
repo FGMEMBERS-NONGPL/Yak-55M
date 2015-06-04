@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>PanelL.ac</path>
+
+
+  <animation> 
+    <type>select</type>
+    <object-name>AnnR</object-name>
+    <condition>
+  <and>
+  <greater-than>
+    <property>systems/electrical/outputs/bus</property>
+    <value>21</value>
+   </greater-than>
+   <equals>
+   <property>controls/circuit-breakers/eng-instr-1</property>
+   <value>true</value>
+   </equals>
+  <or>
+  <equals>
+    <property>controls/lamp-test</property>
+    <value>1</value>
+   </equals>
+  <greater-than>
+  <property>fdm/jsbsim/accelerations/n-pilot-z-norm[0]</property> 
+  <value>7</value> 
+   </greater-than>
+  <less-than>
+  <property>fdm/jsbsim/accelerations/n-pilot-z-norm[0]</property> 
+  <value>-5</value> 
+   </less-than>
+  </or>
+  </and>
+  </condition>
+ </animation>   
+
+
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>SARPPOn1</object-name>
+    <visible>false</visible>
+  <action>                             
+   <desc>SARPP</desc>
+   <button>0</button>               
+    <binding>
+    <command>property-assign</command>
+    <property>control/sarpp</property>
+     <value>1</value>                     
+   </binding>
+  </action>
+  </animation>  
+  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>SARPPOff</object-name>
+    <visible>false</visible>
+  <action>                             
+   <desc>SARPP</desc>
+   <button>0</button>               
+    <binding>
+    <command>property-assign</command>
+    <property>control/sarpp</property>
+      <value>0</value>                     
+   </binding>
+  </action>
+  </animation>  
+  
+
+  
+ <animation>
+    <type>pick</type>
+    <object-name>SARPPOn2</object-name>
+    <visible>false</visible>
+  <action>                             
+   <desc>SARPP</desc>
+   <button>0</button>               
+    <binding>
+    <command>property-assign</command>
+    <property>control/sarpp</property>
+     <value>-1</value>                     
+   </binding>
+  </action>
+  </animation>  
+  
+  
+    
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>SARPPBreaker</object-name>  
+  <property>control/sarpp</property>
+  <factor>-20</factor> 
+  <center>
+   <x-m>0.00236</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.156</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Start</object-name>
+    <visible>false</visible>
+  <action>                             
+   <desc>Engine start</desc>
+   <button>0</button>               
+   <binding>
+      <command>property-assign</command>
+      <property>control/starter1</property>      
+      <value type="bool">true</value>                 
+   </binding>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.Magneto_set()</script>
+   </binding>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.Starter_set()</script>
+   </binding>
+   <mod-up>
+    <binding>
+      <command>property-assign</command>
+      <property>control/starter1</property>      
+      <value type="bool">false</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>control/engstop</property>
+      <value type="bool">false</value>
+    </binding>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.Starter_set()</script>
+   </binding>
+   </mod-up>      
+  </action>
+ </animation>    
+
+ <animation>
+  <type>translate</type>
+  <object-name>StartPB</object-name>
+  <property>control/starter1</property>
+  <factor>-0.004</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>  
+ </animation>  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Krishka</object-name>
+    <visible>true</visible>
+  <action>                             
+   <desc>Start lock</desc>
+   <button>0</button>               
+   <binding>
+      <command>property-toggle</command>
+      <property>control/starter2</property>      
+   </binding>
+  </action>
+ </animation>    
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Krishka</object-name>
+  <property>control/starter2</property>
+  <factor>-110</factor>
+  <center>
+   <x-m>0.0037</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.008</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>  
+ </animation>  
+  
+ 
+
+ 
+
+</PropertyList>

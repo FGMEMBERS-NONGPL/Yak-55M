@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>Volt.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Glass</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>Glass</object-name>
+  </animation>
+  
+
+ <animation> 
+    <type>select</type>
+    <object-name>Needle</object-name>
+    <condition>
+    <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>975</value>
+   </less-than>
+  </condition>
+ </animation>   
+  
+ <animation> 
+    <type>select</type>
+    <object-name>Needle2</object-name>
+    <condition>
+	  <greater-than>
+        <property>engines/engine[0]/rpm</property>
+    <value>975</value>
+   </greater-than>
+  </condition>
+ </animation>   
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>/systems/electrical/outputs/bus</property>
+       <interpolation>
+        <entry><ind> 0</ind><dep>135</dep></entry>
+        <entry><ind>24</ind><dep>-81</dep></entry>
+		<entry><ind>30</ind><dep>-82</dep></entry>
+      </interpolation>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+</animation>
+  
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle2</object-name>
+  <property>/systems/electrical/outputs/bus</property>
+       <interpolation>
+        <entry><ind> 0</ind><dep>135</dep></entry>
+        <entry><ind>30</ind><dep>-135</dep></entry>
+      </interpolation>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+
+

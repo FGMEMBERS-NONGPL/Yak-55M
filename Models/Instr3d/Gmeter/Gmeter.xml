@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>Gmeter.ac</path>
+
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Glass</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>Glass</object-name>
+  </animation>
+ 
+   <animation>
+  <type>rotate</type>
+  <object-name>gmeterNeedleMin</object-name>  
+  <property>control/gmin</property>
+  <interpolation>
+  <entry>  
+  <ind>1</ind> 
+  <dep>22.5</dep> 
+  </entry>
+  <entry>
+  <ind>0</ind> 
+  <dep>0</dep> 
+  </entry>
+  <entry>
+  <ind>-9</ind> 
+  <dep>-202.5</dep> 
+  </entry>
+  <entry>
+  <ind>-15</ind> 
+  <dep>-205</dep> 
+  </entry>
+  </interpolation>  
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+</animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>gmeterNeedlemax</object-name>  
+  <property>control/gmax</property>
+  <interpolation>
+  <entry>
+  <ind>9</ind> 
+  <dep>136.5</dep> 
+  </entry>
+  <entry>
+  <ind>6</ind> 
+  <dep>135</dep> 
+  </entry>
+  <entry>
+  <ind>0</ind> 
+  <dep>0</dep> 
+  </entry>
+  <entry>
+  <ind>-1</ind> 
+  <dep>-22.5</dep> 
+  </entry>
+  </interpolation>  
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+</animation> 
+
+<animation>
+  <type>rotate</type>
+  <object-name>gmeterNeedle</object-name>  
+  <property>fdm/jsbsim/accelerations/n-pilot-z-norm[0]</property>
+  <interpolation>
+  <entry>
+  <ind>10</ind> 
+  <dep>136</dep> 
+  </entry>
+  <entry>
+  <ind>6</ind> 
+  <dep>135</dep> 
+  </entry>
+  <entry>
+  <ind>0</ind> 
+  <dep>0</dep> 
+  </entry>
+  <entry>
+  <ind>-8</ind> 
+  <dep>-180</dep> 
+  </entry>
+  <entry>
+  <ind>-20</ind> 
+  <dep>-181</dep> 
+  </entry>
+  </interpolation>  
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+</animation> 
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>gmeterReset</object-name>
+    <visible>true</visible>
+  <action>                             
+   <desc>reset 1</desc>
+   <button>0</button>               
+   <binding>
+    <command>property-assign</command>
+    <property>control/gmax</property>		     
+    <value>-1</value>
+   </binding>	
+   <binding>
+    <command>property-assign</command>
+    <property>control/gmin</property>		     
+    <value>-1</value>
+   </binding>	
+  </action>
+  </animation>
+
+  
+ 
+</PropertyList>

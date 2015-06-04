@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!-- Generic 28 Volt electrical system -->
+<PropertyList>
+<!-- Supplier list -->
+   <supplier>
+      <name>Battery 1</name>
+      <prop>systems/electrical/suppliers/battery[0]</prop>
+      <kind>battery</kind>
+      <volts>24</volts>
+<!-- needs to be > 24.5, but this is a guess -->
+      <amps>20</amps>
+<!-- I have no idea! -->
+   </supplier>
+
+   <supplier>
+      <name>Alternator 1</name>
+      <prop>systems/electrical/suppliers/alternator[0]</prop>
+      <kind>alternator</kind>
+      <rpm-source>engines/engine[0]/rpm</rpm-source>
+      <volts>28.5</volts>
+      <amps>100</amps>
+   </supplier>
+
+   <supplier>
+      <name>External 1</name>
+      <prop>systems/electrical/suppliers/external[0]</prop>
+      <kind>external</kind>
+      <volts>0.1</volts>
+<!-- by default not connected -->
+      <amps>100</amps>
+   </supplier>
+
+<!-- Bus list -->
+   <bus>
+      <name>Master Bus</name>
+      <prop>systems/electrical/outputs/bus</prop>
+   </bus>
+
+<!-- Generic Outputs -->
+   <output>
+      <name>Ignition Power</name>
+      <prop>systems/electrical/outputs/ign</prop>
+   </output>
+
+   <output>
+      <name>Instrument Power</name>
+      <prop>systems/electrical/outputs/eng-instr-1</prop>
+   </output>
+
+   <output>
+      <name>Radio Power</name>
+      <prop>systems/electrical/outputs/nav-com-1</prop>
+   </output>
+
+   <output>
+      <name>SARPPH Power</name>
+      <prop>systems/electrical/outputs/sarpph</prop>
+   </output>
+
+   <output>
+      <name>Pitot Power</name>
+      <prop>systems/electrical/outputs/pitot-heat</prop>
+   </output>
+
+   
+<!-- connect in power sources -->
+   <connector>
+      <input>Alternator 1</input>
+      <output>Master Bus</output>
+      <switch>
+         <prop>controls/circuit-breakers/generator</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+   <connector>
+      <input>External 1</input>
+      <output>Master Bus</output>
+   </connector>
+
+   <connector>
+      <input>Battery 1</input>
+      <output>Master Bus</output>
+      <switch>
+         <prop>controls/electric/battery-switch</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+<!-- connect master bus outputs -->
+   <connector>
+      <input>Master Bus</input>
+      <output>Ignition Power</output>
+      <switch>
+         <prop>controls/circuit-breakers/ign</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+   <connector>
+      <input>Master Bus</input>
+      <output>Instrument Power</output>
+      <switch>
+         <prop>controls/circuit-breakers/eng-instr-1</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+   <connector>
+      <input>Master Bus</input>
+      <output>Radio Power</output>
+      <switch>
+         <prop>controls/circuit-breakers/nav-com-1</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+   <connector>
+      <input>Master Bus</input>
+      <output>SARPPH Power</output>
+      <switch>
+         <prop>controls/circuit-breakers/sarpph</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+   <connector>
+      <input>Master Bus</input>
+      <output>Pitot Power</output>
+      <switch>
+         <prop>controls/circuit-breakers/pitot-heat</prop>
+         <initial-state>off</initial-state>
+      </switch>
+   </connector>
+
+		 
+</PropertyList>
+

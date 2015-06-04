@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>Ann.ac</path>
+  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>test</object-name>
+    <visible>false</visible>
+  <action>                             
+   <desc>Lamp test</desc>
+   <button>0</button>               
+   <binding>
+      <command>property-assign</command>
+      <property>controls/lamp-test</property>      
+      <value>1</value>                 
+   </binding>
+   <mod-up>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/lamp-test</property>      
+      <value>0</value>
+    </binding>
+   </mod-up>      
+  </action>
+ </animation>    
+
+ <animation>
+  <type>translate</type>
+  <object-name>lampTestPB</object-name>
+  <property>controls/lamp-test</property>
+  <factor>-0.004</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>  
+ </animation>  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ 
+  <animation> 
+    <type>select</type>
+    <object-name>AnnR</object-name>
+    <condition>
+  <and>
+  <greater-than>
+    <property>systems/electrical/outputs/bus</property>
+    <value>21</value>
+   </greater-than>
+   <equals>
+   <property>controls/circuit-breakers/eng-instr-1</property>
+   <value>true</value>
+   </equals>
+   <or>
+  <equals>
+    <property>controls/lamp-test</property>
+    <value>1</value>
+   </equals>
+    <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>975</value>
+   </less-than>
+   <equals>
+   <property>controls/circuit-breakers/generator</property>
+   <value>false</value>
+   </equals>
+    </or>
+   </and>
+  </condition>
+ </animation>   
+
+  <animation> 
+    <type>select</type>
+    <object-name>AnnY</object-name>
+    <condition>
+  <and>
+  <greater-than>
+    <property>systems/electrical/outputs/bus</property>
+    <value>21</value>
+   </greater-than>
+   <equals>
+   <property>controls/circuit-breakers/eng-instr-1</property>
+   <value>true</value>
+   </equals>
+  <or>   
+  <equals>
+    <property>controls/lamp-test</property>
+    <value>1</value>
+   </equals>
+  <and>
+  <greater-than>
+    <property>engines/engine/cht-degf</property>
+    <value>545</value>
+   </greater-than>
+  <greater-than>
+    <property>engines/engine/oil-temperature-degf</property>
+    <value>203</value>
+   </greater-than>
+   </and>
+  <and>
+  <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>2850</value>
+   </greater-than>
+  <less-than>
+    <property>engines/engine/oil-temperature-degf</property>
+    <value>104</value>
+   </less-than>
+   </and>
+  </or>
+   </and>  
+  </condition>
+ </animation>   
+  
+</PropertyList>

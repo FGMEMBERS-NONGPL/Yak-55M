@@ -1,0 +1,1917 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Yak-55M.ac</path>
+ 
+	<nasal>
+		<load>
+		var livery_update = aircraft.livery_update.new("Aircraft/Yak-55M/Models/Liveries", 10);
+		var self = cmdarg();
+		var aero = self.getNode("sim/aero", 1);
+		aero.alias(self.getNode("sim/multiplay/generic/string", 1));
+		</load>
+
+		<unload>
+		livery_update.stop();
+		aero.unalias();
+		</unload>
+	</nasal>
+
+	<animation>
+		<type>material</type>
+		<object-name>Kil1</object-name>
+		<object-name>FuselagN</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Yak-55M.png</texture>
+	</animation>
+ 
+
+
+ <!-- LOD for the model as a whole -->
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+
+<animation>
+<type>noshadow</type>
+<object-name>Fonar</object-name>
+<object-name>WindScreen</object-name>    
+<object-name>BackScreen</object-name>    
+</animation>
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/PilotYak/Pilot.xml</path> 
+ <offsets>
+  <x-m>2.35</x-m> 
+  <y-m>0.000</y-m> 
+  <z-m>0.0</z-m>
+  </offsets>
+  </model>
+  
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Effects/Shadow/Shadow.xml</path> 
+ <offsets>
+  <x-m>0.0</x-m> 
+  <y-m>0.0</y-m> 
+  <z-m>0.175</z-m>
+  </offsets>
+  </model>
+  
+  
+<!-- Cockpit Instr3d -->
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/PanelR/PanelR.xml</path> 
+ <offsets>
+  <x-m>2.006</x-m> 
+  <y-m>0.26</y-m> 
+  <z-m>0.2</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Ann/Ann.xml</path> 
+ <offsets>
+   <x-m>2.0108</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>0.22</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+  
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Radio/Radio.xml</path> 
+ <offsets>
+  <x-m>2.0075</x-m> 
+  <y-m>0.0</y-m> 
+  <z-m>0.23</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Magneto/PM1.xml</path> 
+ <offsets>
+  <x-m>1.998</x-m> 
+  <y-m>-0.285</y-m> 
+  <z-m>0.225</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/PanelL/PanelL.xml</path> 
+ <offsets>
+  <x-m>1.998</x-m> 
+  <y-m>-0.335</y-m> 
+  <z-m>0.225</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+  
+
+    
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/MCompass/MCompass.xml</path> 
+ <offsets>
+  <x-m>1.90</x-m> 
+  <y-m>0.0</y-m> 
+  <z-m>0.505</z-m>
+  </offsets>
+  </model>
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Gmeter/Gmeter.xml</path> 
+ <offsets>
+  <x-m>1.975</x-m> 
+  <y-m>-0.285</y-m> 
+  <z-m>0.295</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/IAS/IAS.xml</path> 
+ <offsets>
+  <x-m>1.95</x-m> 
+  <y-m>-0.1</y-m> 
+  <z-m>0.4</z-m>
+   <pitch-deg>-19</pitch-deg>
+  </offsets>
+  </model>
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/SlipInd/SlipInd.xml</path> 
+ <offsets>
+  <x-m>1.95</x-m> 
+  <y-m>0.0</y-m> 
+  <z-m>0.4</z-m>
+   <pitch-deg>-19</pitch-deg>
+  </offsets>
+  </model>
+  
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/RPM/RPM.xml</path> 
+ <offsets>
+  <x-m>1.95</x-m> 
+  <y-m>0.1</y-m> 
+  <z-m>0.4</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Clock/Clock.xml</path> 
+ <offsets>
+   <x-m>1.9785</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>0.315</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+
+
+  
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Alt/Alt.xml</path> 
+ <offsets>
+   <x-m>1.9815</x-m>
+   <y-m>-0.1</y-m>
+   <z-m>0.305</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+
+   <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/3eng/3eng.xml</path> 
+ <offsets>
+   <x-m>1.9815</x-m>
+   <y-m>0.1</y-m>
+   <z-m>0.305</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+   
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Boost/Boost.xml</path> 
+ <offsets>
+  <x-m>1.9815</x-m> 
+  <y-m>0.19</y-m> 
+  <z-m>0.305</z-m>
+   <pitch-deg>-19</pitch-deg>  
+  </offsets>
+  </model>
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Volt/Volt.xml</path> 
+ <offsets>
+   <x-m>2.01</x-m>
+   <y-m>-0.20</y-m>
+   <z-m>0.225</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+  
+    
+
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/CHT/CHT.xml</path> 
+ <offsets>
+   <x-m>2.01</x-m>
+   <y-m>0.125</y-m>
+   <z-m>0.225</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+ 
+ <model>
+  <path>Aircraft/Yak-55M/Models/Instr3d/Carb/Carb.xml</path> 
+ <offsets>
+   <x-m>2.01</x-m>
+   <y-m>0.195</y-m>
+   <z-m>0.225</z-m>
+   <pitch-deg>-19</pitch-deg>   
+  </offsets>
+  </model>
+  
+  
+<!-- Cockpit control -->
+
+ <animation>
+  <type>select</type>
+  <object-name>Fonar</object-name>
+  <object-name>TrubaF</object-name>
+  <object-name>VintF</object-name>    
+  <object-name>Ruchka</object-name>
+  <object-name>ZamokOpen</object-name>
+  <object-name>ZamokCl</object-name>
+  <object-name>ZamokCl2</object-name>
+  <object-name>KnopkaF</object-name>    
+  <condition>
+    <property>control/canopy-not-crash</property>
+  </condition>
+ </animation>
+
+
+
+
+ <animation>
+  <type>translate</type>
+  <object-name>Fonar</object-name>
+  <object-name>TrubaF</object-name>
+  <object-name>VintF</object-name>      
+  <object-name>Ruchka</object-name>
+  <object-name>ZamokOpen</object-name>
+  <object-name>ZamokCl</object-name>
+  <object-name>ZamokCl2</object-name>
+  <object-name>KnopkaF</object-name>  
+  <property>controls/canopy/canopy-pos-norm</property>
+  <factor>0.55</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> 
+
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>ZamokOpen</object-name>
+    <visible>true</visible>
+  <action>       
+   <desc>Fonar</desc>
+   <button>0</button>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.toggle_canopy()</script>
+   </binding>
+  </action>
+ </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>KnopkaF</object-name>
+    <visible>true</visible>
+  <action>       
+   <desc>Fonar</desc>
+   <button>0</button>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.toggle_canopy()</script>
+   </binding>
+  </action>
+ </animation>
+
+
+ <animation>
+  <type>translate</type>
+  <object-name>KnopkaF</object-name>
+  <property>controls/canopy/canopy-pos-norm</property>
+    <interpolation>
+     <entry><ind> 0</ind><dep> 0</dep></entry>
+     <entry><ind> 0.02</ind><dep>0.005</dep></entry>
+     <entry><ind> 0.93</ind><dep>0.005</dep></entry>
+     <entry><ind> 1</ind><dep>0</dep></entry>
+    </interpolation> 
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> 
+
+
+
+ 
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>ZamokOpen</object-name>
+  <property>controls/canopy/canopy-pos-norm</property>
+    <interpolation>
+     <entry><ind> 0</ind><dep> 0</dep></entry>
+     <entry><ind> 0.02</ind><dep>0</dep></entry>
+     <entry><ind> 0.03</ind><dep>-0.01</dep></entry>
+     <entry><ind> 1</ind><dep>-0.01</dep></entry>
+    </interpolation> 
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation> 
+
+ 
+
+  <animation>
+    <type>pick</type>
+    <object-name>ZamokCl</object-name>
+    <visible>true</visible>
+  <action>       
+   <desc>Fonar</desc>
+   <button>0</button>       
+   <binding>
+      <command>nasal</command>
+      <script>scripts.toggle_canopy()</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>ZamokCl</object-name>
+  <property>controls/canopy/canopy-pos-norm</property>
+    <interpolation>
+     <entry><ind> 0</ind><dep> 0</dep></entry>
+     <entry><ind> 0.02</ind><dep>0</dep></entry>
+     <entry><ind> 0.03</ind><dep>0.01</dep></entry>
+     <entry><ind> 1</ind><dep>0.01</dep></entry>
+    </interpolation> 
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation> 
+
+ 
+ 
+
+ 
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>ShutOffFuel</object-name>
+    <visible>true</visible>
+  <action>       
+   <desc>shut off fuel</desc>
+   <button>0</button>       
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine/mixture</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  
+ <animation>
+  <type>translate</type>
+  <object-name>ShutOffFuel</object-name>  
+  <property>controls/engines/engine/mixture</property>
+  <factor>-0.035</factor>  
+  <axis>
+   <x1-m>1.9469</x1-m>
+   <y1-m>-0.3339</y1-m>
+   <z1-m>0.1257</z1-m>
+   <x2-m>2.0707</x2-m>
+   <y2-m>-0.3339</y2-m>
+   <z2-m>0.1648</z2-m>
+   
+  </axis>
+ </animation>
+
+
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Galusi</object-name>  
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>-50</factor>  
+  <center>
+   <x-m>2.39</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.002</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+   
+ 
+ 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Throttle</object-name>  
+  <property>controls/engines/engine/throttle</property>
+  <factor>-50</factor>  
+  <center>
+   <x-m>2.448</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.1494</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>PithProp</object-name>  
+  <property>controls/engines/engine/propeller-pitch</property>
+  <factor>-50</factor>  
+  <center>
+   <x-m>2.448</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.1494</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>PedalL1</object-name>
+  <object-name>PedalL2</object-name>
+  <object-name>TrosikL1</object-name>
+  <object-name>PruginaL</object-name>
+  <object-name>PedalR1</object-name>
+  <object-name>PedalR2</object-name>
+  <object-name>TrosikR1</object-name>
+  <object-name>PruginaR</object-name>
+  <object-name>Kachalka2</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>1.8896</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.208</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Kachalka1</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>1.9342</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.230</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>PedalL1</object-name>
+  <object-name>PedalL2</object-name>
+  <object-name>TrosikL1</object-name>
+  <object-name>PruginaL</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-25.0</factor>
+  <center>
+   <x-m>1.8896</x-m>
+   <y-m>-0.122</y-m>
+   <z-m>-0.208</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>PedalR1</object-name>
+  <object-name>PedalR2</object-name>
+  <object-name>TrosikR1</object-name>
+  <object-name>PruginaR</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-25.0</factor>
+  <center>
+   <x-m>1.8896</x-m>
+   <y-m>0.122</y-m>
+   <z-m>-0.208</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TrosPL</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>1.8</x-m>
+   <y-m>-0.0337</y-m>
+   <z-m>-0.208</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>TrosPR</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>1.8</x-m>
+   <y-m>0.0337</y-m>
+   <z-m>-0.208</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>PedalL2</object-name>
+  <property>controls/gear/brake-left</property>
+  <factor>-15.0</factor>
+  <center>
+   <x-m>1.791</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.2</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>PedalR2</object-name>
+  <property>controls/gear/brake-right</property>
+  <factor>-15.0</factor>
+  <center>
+   <x-m>1.791</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.2</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>PedalL2</object-name>
+  <object-name>PedalR2</object-name>  
+  <property>controls/gear/brake-parking</property>
+  <factor>-15.0</factor>
+  <center>
+   <x-m>1.791</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.2</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ <!-- Stick -->  
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Stick</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-10</factor> <!-- check -->  
+  <center>
+   <x-m>2.151</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.2786</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Stick</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-10</factor> <!-- check -->
+  <center>
+   <x-m>2.151</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.2786</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+
+
+
+       
+ <!-- Propeller + engine ************************-->
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Propdisc</object-name>
+  <object-name>Propdisc2</object-name>
+ </animation> 
+
+ 
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>Os</object-name>
+  <object-name>Osc</object-name>
+  <object-name>Os2</object-name>
+  <object-name>Lopast1</object-name>
+  <object-name>Lopast2</object-name>
+  <object-name>Lopast1c</object-name>
+  <object-name>Lopast2c</object-name>
+  <object-name>Propdisc</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.6</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Propdisc2</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.01</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Lopast1</object-name>
+  <property>controls/engines/engine/propeller-pitch</property>
+    <interpolation>
+     <entry><ind> 0</ind><dep> -20</dep></entry>
+     <entry><ind> 1</ind><dep> 0</dep></entry>
+    </interpolation> 
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Lopast2</object-name>
+  <property>controls/engines/engine/propeller-pitch</property>
+    <interpolation>
+     <entry><ind> 0</ind><dep> -20</dep></entry>
+     <entry><ind> 1</ind><dep> 0</dep></entry>
+    </interpolation> 
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+  
+ 
+ <animation>
+  <type>select</type>
+  <object-name>Lopast1</object-name>
+  <object-name>Lopast2</object-name>
+  <object-name>Os</object-name>
+  <condition>
+   <and>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>900</value>
+   </less-than>
+   <not>
+    <property>control/engstop2</property>
+   </not>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Lopast1c</object-name>
+  <object-name>Lopast2c</object-name>
+  <object-name>Osc</object-name>  
+  <condition>
+    <property>control/engstop2</property>
+  </condition>
+ </animation>
+ 
+ 
+  <animation>
+  <type>select</type>
+  <object-name>Propdisc</object-name>
+   <condition>
+   <and>   
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>600</value>
+   </greater-than>
+   <not>
+    <property>control/engstop2</property>
+   </not>
+   </and>
+  </condition>
+ </animation>
+ 
+  <animation>
+  <type>select</type>
+  <object-name>Propdisc2</object-name>
+   <condition>
+   <and>   
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>900</value>
+   </greater-than>
+   <not>
+    <property>control/engstop2</property>
+   </not>
+   </and>
+  </condition>
+ </animation>
+
+ 
+   <!-- Cranking effects -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Cranking/Cranking.xml</path>
+    <offsets>
+      <x-m> 0.9 </x-m>
+      <y-m> -0.26 </y-m>
+      <z-m> -0.69 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  75 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Cranking/Cranking.xml</path>
+    <offsets>
+      <x-m>  0.9 </x-m>
+      <y-m>  0.26 </y-m>
+      <z-m> -0.69 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  75 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Crash/Crash.xml</path>
+    <offsets>
+      <x-m> 0.75 </x-m>
+      <y-m> -0.4 </y-m>
+      <z-m> 0.3 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Crash/Crash.xml</path>
+    <offsets>
+      <x-m>  0.75 </x-m>
+      <y-m>  0.4 </y-m>
+      <z-m>  0.3 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+   <!-- Ground effects -->
+
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Ground/Ground0.xml</path>
+    <offsets>
+      <x-m>  1.9 </x-m>
+      <y-m>  1.05 </y-m>
+      <z-m> -1.24 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Ground/Ground1.xml</path>
+    <offsets>
+      <x-m>   1.9 </x-m>
+      <y-m>  -1.05 </y-m>
+      <z-m>  -1.24 </z-m>
+    </offsets>
+  </model>
+  
+   <!-- Tail -->
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Ground/Ground2.xml</path>
+    <offsets>
+      <x-m>  7.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.60 </z-m>
+    </offsets>
+  </model>
+  
+  
+  
+  <model>
+    <path>Aircraft/Yak-55M/Models/Effects/Smoke/Smoke.xml</path>
+    <offsets>
+      <x-m>  1.74 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.67 </z-m>
+      </offsets>
+  </model>  
+  
+  
+  
+
+
+ 
+ <!-- GearL ************************--> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireL</object-name>
+  <object-name>DiskL</object-name>
+  <object-name>Gear1L</object-name>
+  <object-name>Tros1L</object-name>
+  <object-name>Skoba1L</object-name>
+  <object-name>Gear2L</object-name>
+  <object-name>Tros2L</object-name>
+  <object-name>Skoba2L</object-name>
+  <object-name>Gear3L</object-name>
+  <object-name>Tros3L</object-name>
+  <object-name>Skoba3L</object-name>
+  <object-name>Gear4L</object-name>
+  <object-name>Tros4L</object-name>
+  <property>gear/gear[0]/compression-ft</property>
+  <factor>-5</factor>
+  <axis>
+   <x1-m>1.300</x1-m>
+   <y1-m>-0.5774</y1-m>
+   <z1-m>-0.620</z1-m>
+   <x2-m>1.4418</x2-m>
+   <y2-m>-0.5774</y2-m>
+   <z2-m>-0.6483</z2-m>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireL</object-name>
+  <object-name>DiskL</object-name>
+  <object-name>Gear1L</object-name>
+  <object-name>Tros1L</object-name>
+  <object-name>Skoba1L</object-name>
+  <object-name>Gear2L</object-name>
+  <object-name>Tros2L</object-name>
+  <object-name>Skoba2L</object-name>
+  <object-name>Gear3L</object-name>
+  <object-name>Tros3L</object-name>
+  <property>gear/gear[0]/compression-ft</property>
+  <factor>-6</factor>
+  <axis>
+   <x1-m>1.2765</x1-m>
+   <y1-m>-0.6903</y1-m>
+   <z1-m>-0.771</z1-m>
+   <x2-m>1.4073</x2-m>
+   <y2-m>-0.6901</y2-m>
+   <z2-m>-0.7965</z2-m>
+  </axis>
+ </animation> 
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireL</object-name>
+  <object-name>DiskL</object-name>
+  <object-name>Gear1L</object-name>
+  <object-name>Tros1L</object-name>
+  <object-name>Skoba1L</object-name>
+  <object-name>Gear2L</object-name>
+  <object-name>Tros2L</object-name>
+  <property>gear/gear[0]/compression-ft</property>
+  <factor>-7</factor>
+  <axis>
+   <x1-m>1.2548</x1-m>
+   <y1-m>-0.7844</y1-m>
+   <z1-m>-0.924</z1-m>
+   <x2-m>1.3702</x2-m>
+   <y2-m>-0.7844</y2-m>
+   <z2-m>-0.9465</z2-m>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireL</object-name>
+  <object-name>DiskL</object-name>
+  <object-name>Gear1L</object-name>
+  <object-name>Tros1L</object-name>
+  <property>gear/gear[0]/compression-ft</property>
+  <factor>-8</factor>
+  <axis>
+   <x1-m>1.2307</x1-m>
+   <y1-m>-0.8567</y1-m>
+   <z1-m>-1.089</z1-m>
+   <x2-m>1.3306</x2-m>
+   <y2-m>-0.8567</y2-m>
+   <z2-m>-1.1087</z2-m>
+  </axis>
+ </animation> 
+
+ 
+  <animation>
+  <type>spin</type>
+  <object-name>TireL</object-name>
+  <condition>
+   <and>
+    <less-than>
+     <property>position/altitude-agl-ft</property> <!-- possible bug of wow -->
+     <value>50.0</value>
+    </less-than>
+    <property>gear/gear[0]/wow</property> <!-- ground contact -->
+   </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>2.86</factor>
+  <axis>
+   <x1-m>1.2265</x1-m>
+   <y1-m>-0.9125</y1-m>
+   <z1-m>-1.377</z1-m>
+   <x2-m>1.218</x2-m>
+   <y2-m>-1.0905</y2-m>
+   <z2-m>-1.4205</z2-m>
+  </axis>
+ </animation>
+ 
+ 
+ 
+ 
+ <!-- GearR ************************--> 
+ <animation>
+  <type>rotate</type>
+  <object-name>TireR</object-name>
+  <object-name>DiskR</object-name>
+  <object-name>Gear1R</object-name>
+  <object-name>Tros1R</object-name>
+  <object-name>Skoba1R</object-name>
+  <object-name>Gear2R</object-name>
+  <object-name>Tros2R</object-name>
+  <object-name>Skoba2R</object-name>
+  <object-name>Gear3R</object-name>
+  <object-name>Tros3R</object-name>
+  <object-name>Skoba3R</object-name>
+  <object-name>Gear4R</object-name>
+  <object-name>Tros4R</object-name>
+  <property>gear/gear[1]/compression-ft</property>
+  <factor>5</factor>
+  <axis>
+   <x1-m>1.300</x1-m>
+   <y1-m>0.5774</y1-m>
+   <z1-m>-0.620</z1-m>
+   <x2-m>1.4418</x2-m>
+   <y2-m>0.5774</y2-m>
+   <z2-m>-0.6483</z2-m>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireR</object-name>
+  <object-name>DiskR</object-name>
+  <object-name>Gear1R</object-name>
+  <object-name>Tros1R</object-name>
+  <object-name>Skoba1R</object-name>
+  <object-name>Gear2R</object-name>
+  <object-name>Tros2R</object-name>
+  <object-name>Skoba2R</object-name>
+  <object-name>Gear3R</object-name>
+  <object-name>Tros3R</object-name>
+  <property>gear/gear[1]/compression-ft</property>
+  <factor>6</factor>
+  <axis>
+   <x1-m>1.2765</x1-m>
+   <y1-m>0.6903</y1-m>
+   <z1-m>-0.771</z1-m>
+   <x2-m>1.4073</x2-m>
+   <y2-m>0.6901</y2-m>
+   <z2-m>-0.7965</z2-m>
+  </axis>
+ </animation> 
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireR</object-name>
+  <object-name>DiskR</object-name>
+  <object-name>Gear1R</object-name>
+  <object-name>Tros1R</object-name>
+  <object-name>Skoba1R</object-name>
+  <object-name>Gear2R</object-name>
+  <object-name>Tros2R</object-name>
+  <property>gear/gear[1]/compression-ft</property>
+  <factor>7</factor>
+  <axis>
+   <x1-m>1.2548</x1-m>
+   <y1-m>0.7844</y1-m>
+   <z1-m>-0.924</z1-m>
+   <x2-m>1.3702</x2-m>
+   <y2-m>0.7844</y2-m>
+   <z2-m>-0.9465</z2-m>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TireR</object-name>
+  <object-name>DiskR</object-name>
+  <object-name>Gear1R</object-name>
+  <object-name>Tros1R</object-name>
+  <property>gear/gear[1]/compression-ft</property>
+  <factor>8</factor>
+  <axis>
+   <x1-m>1.2307</x1-m>
+   <y1-m>0.8567</y1-m>
+   <z1-m>-1.089</z1-m>
+   <x2-m>1.3306</x2-m>
+   <y2-m>0.8567</y2-m>
+   <z2-m>-1.1087</z2-m>
+  </axis>
+ </animation> 
+
+
+  
+  
+  <animation>
+  <type>spin</type>
+  <object-name>TireR</object-name>
+  <condition>
+   <and>
+    <less-than>
+     <property>position/altitude-agl-ft</property> <!-- possible bug of wow -->
+     <value>50.0</value>
+    </less-than>
+    <property>gear/gear[1]/wow</property> <!-- ground contact -->
+   </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>-2.86</factor>
+  <axis>
+   <x1-m>1.2265</x1-m>
+   <y1-m>0.9125</y1-m>
+   <z1-m>-1.377</z1-m>
+   <x2-m>1.218</x2-m>
+   <y2-m>1.0905</y2-m>
+   <z2-m>-1.4205</z2-m>
+  </axis>
+ </animation>
+
+
+
+ <!-- Gear0 ************************-->
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>TailGear</object-name>
+  <object-name>TailTire</object-name>
+  <object-name>TailOs</object-name>  
+  <property>controls/flight/rudder</property>
+  <factor>37.0</factor>
+  <center>
+   <x-m>6.614</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.91</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+
+  <animation>
+  <type>spin</type>
+  <object-name>TailTire</object-name>
+  <condition>
+   <and>
+    <less-than>
+     <property>position/altitude-agl-ft</property> <!-- possible bug of wow -->
+     <value>50.0</value>
+    </less-than>
+    <property>gear/gear[2]/wow</property> <!-- ground contact -->
+   </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>-5</factor>
+  <center>
+   <x-m>6.7381</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.5747</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  
+ 
+ <!-- Flight Controls ************************-->
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>EleronL</object-name>
+  <object-name>RebroL</object-name>
+  <object-name>KompensatorL</object-name>
+  <object-name>Tjaga1L</object-name>
+  <object-name>Tjaga2L</object-name>  
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>   
+  <axis>
+   <x1-m>2.481</x1-m>
+   <y1-m>-2.049</y1-m>
+   <z1-m>0.0</z1-m>
+   <x2-m>2.093</x2-m>
+   <y2-m>-3.677</y2-m>
+   <z2-m>0.0</z2-m>
+  </axis>
+ </animation>
+ 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Tjaga1L</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>25</factor>   
+  <center>
+   <x-m>2.6655</x-m>
+   <y-m>-1.274</y-m>
+   <z-m>-0.1063</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ 
+ 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>EleronR</object-name>
+  <object-name>RebroR</object-name>
+  <object-name>KompensatorR</object-name>  
+  <object-name>Tjaga1R</object-name>
+  <object-name>Tjaga2R</object-name>  
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>   
+  <axis>  
+   <x1-m>2.481</x1-m>
+   <y1-m>2.049</y1-m>
+   <z1-m>0.0</z1-m>
+   <x2-m>2.093</x2-m>
+   <y2-m>3.677</y2-m>
+   <z2-m>0.0</z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Tjaga1R</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>25</factor>   
+  <center>
+   <x-m>2.6655</x-m>
+   <y-m>1.274</y-m>
+   <z-m>-0.1063</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ 
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Elevator</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>25</factor> 
+  <center>
+   <x-m>6.139</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0666</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Ruder</object-name>
+  <object-name>SkobaRuder</object-name>  
+  <object-name>Kachalka</object-name>
+  <object-name>PruginaTL</object-name>
+  <object-name>PruginaTR</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>27.0</factor>
+  <center>
+   <x-m>6.344</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.91</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>PruginaTL</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-27.0</factor>
+  <center>
+   <x-m>6.383</x-m>
+   <y-m>-0.0884</y-m>
+   <z-m>-0.41</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>PruginaTR</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-27.0</factor>
+  <center>
+   <x-m>6.383</x-m>
+   <y-m>0.0884</y-m>
+   <z-m>-0.41</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ 
+ 
+ 
+ 
+ <!-- animation of engine flaps ********************************** -->
+ 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal01</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal02</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.222</y>
+   <z>0.975</z>
+    </axis>
+ </animation>
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal03</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.434</y>
+   <z>0.901</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal04</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.623</y>
+   <z>0.782</z>
+    </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal05</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.782</y>
+   <z>0.623</z>
+    </axis>
+ </animation>
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal06</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.901</y>
+   <z>0.434</z>
+    </axis>
+ </animation>
+ 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal07</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.975</y>
+   <z>0.222</z>
+    </axis>
+ </animation>
+  
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal08</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal09</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.975</y>
+   <z>-0.222</z>
+    </axis>
+ </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal10</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.901</y>
+   <z>-0.434</z>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal11</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.782</y>
+   <z>-0.623</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal12</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.623</y>
+   <z>-0.782</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal13</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.434</y>
+   <z>-0.901</z>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal14</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>-0.222</y>
+   <z>-0.975</z>
+    </axis>
+ </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal15</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal16</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.222</y>
+   <z>-0.975</z>
+    </axis>
+ </animation>
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal17</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.434</y>
+   <z>-0.901</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal18</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.623</y>
+   <z>-0.782</z>
+    </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal19</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.782</y>
+   <z>-0.623</z>
+    </axis>
+ </animation>
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal20</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.901</y>
+   <z>-0.434</z>
+    </axis>
+ </animation>
+ 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal21</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.975</y>
+   <z>-0.222</z>
+    </axis>
+ </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal22</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal23</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.975</y>
+   <z>0.222</z>
+    </axis>
+ </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal24</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.901</y>
+   <z>0.434</z>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal25</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.782</y>
+   <z>0.623</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal26</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.623</y>
+   <z>0.782</z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal27</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.434</y>
+   <z>0.901</z>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Gal28</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+  <factor>70.0</factor>
+  <center>
+   <x-m>0.143</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>   
+  <axis>     
+   <x>0</x>
+   <y>0.222</y>
+   <z>0.975</z>
+    </axis>
+ </animation>
+  
+  
+     
+</PropertyList>

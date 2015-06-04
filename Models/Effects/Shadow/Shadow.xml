@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>Shadow.ac</path>
+
+        <animation>
+            <type>select</type>
+            <object-name>shadow</object-name>
+            <condition>
+             <and>
+                <less-than>
+                   <property>position/altitude-agl-ft</property>
+                    <value>300</value>
+                    </less-than>
+                    <less-than>
+                    <property>sim/time/sun-angle-rad</property>
+                    <value>1.25</value>
+                    </less-than>
+					<or>
+				    <equals>
+                    <property>gear/gear[1]/wow</property>
+					<value>false</value>
+                    </equals>
+				    <equals>
+					<property>gear/gear[0]/wow</property>
+					<value>false</value>
+                    </equals>
+					</or>          
+               </and>
+            </condition>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>shadow</object-name>
+            <property>orientation/pitch-deg</property>
+            <factor> 1 </factor>
+                <center>
+                <x-m> 3.8 </x-m>
+                <y-m> 0 </y-m>
+                <z-m> 0 </z-m>
+                </center>
+               <axis>
+                <x>0</x>
+                <y>-1</y>
+                <z>0</z>
+               </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>shadow</object-name>
+            <property>orientation/roll-deg</property>
+            <factor> 1 </factor>
+            <center>
+             <x-m> 3.8 </x-m>
+             <y-m> 0 </y-m>
+             <z-m> 0 </z-m>
+            </center>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+
+  <animation>
+   <type>translate</type>
+   <object-name>shadow</object-name>
+   <property>position/altitude-agl-ft</property>
+   <factor> -0.285 </factor>
+   <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+   </center>
+   <axis>
+     <x> 0 </x>
+     <y> 0 </y>
+     <z> 1 </z>
+   </axis>
+ </animation>
+		
+        <animation>
+            <type>select</type>
+            <object-name>shadow2</object-name>
+            <condition>
+             <or>
+            <property>gear/gear[1]/wow</property>
+ 			<property>gear/gear[0]/wow</property>
+             </or>
+            </condition>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>shadow2</object-name>
+            <property>orientation/pitch-deg</property>
+            <factor> 1 </factor>
+                <center>
+                <x-m> 1.71 </x-m>
+                <y-m> 0 </y-m>
+                <z-m> 0 </z-m>
+                </center>
+               <axis>
+                <x>0</x>
+                <y>-1</y>
+                <z>0</z>
+               </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>shadow2</object-name>
+            <property>orientation/roll-deg</property>
+            <factor> 1 </factor>
+            <center>
+             <x-m> 1.71 </x-m>
+             <y-m> 0 </y-m>
+             <z-m> 0 </z-m>
+            </center>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+
+
+<animation>
+    <type>translate</type>
+    <object-name>shadow2</object-name>
+    <object-name>shadow</object-name>			
+    <property>orientation/model/heading-deg</property>
+     <interpolation>
+      <entry> <ind>0</ind> <dep>-1.2</dep>  </entry>
+      <entry> <ind>45</ind> <dep>-0.87</dep>  </entry>
+      <entry> <ind>90</ind> <dep>0</dep>  </entry>
+      <entry> <ind>135</ind> <dep>0.67</dep>  </entry>
+      <entry> <ind>180</ind> <dep>0.9</dep>  </entry>
+      <entry> <ind>225</ind> <dep>0.67</dep>  </entry>
+      <entry> <ind>270</ind> <dep>0</dep>  </entry>
+      <entry> <ind>315</ind> <dep>-0.87</dep>  </entry>
+      <entry> <ind>360</ind> <dep>-1.2</dep>  </entry>
+     </interpolation>			
+       <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+       </axis>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>shadow2</object-name>
+    <object-name>shadow</object-name>
+    <property>orientation/model/heading-deg</property>
+     <interpolation>
+      <entry> <ind>0</ind> <dep>0</dep>  </entry>
+      <entry> <ind>45</ind> <dep>-0.7</dep>  </entry>
+      <entry> <ind>90</ind> <dep>-1.0</dep>  </entry>
+      <entry> <ind>135</ind> <dep>-0.7</dep>  </entry>
+      <entry> <ind>180</ind> <dep>0</dep>  </entry>
+      <entry> <ind>225</ind> <dep>0.7</dep>  </entry>
+      <entry> <ind>270</ind> <dep>1.0</dep>  </entry>
+      <entry> <ind>315</ind> <dep>0.7</dep>  </entry>
+      <entry> <ind>360</ind> <dep>0</dep>  </entry>
+     </interpolation>			
+       <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+       </axis>
+</animation>
+		
+
+
+
+		
+
+</PropertyList>

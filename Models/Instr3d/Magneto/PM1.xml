@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <path>PM1.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MagnetoSw</object-name>
+  <property>control/magneto</property>
+  <factor>30.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type> 
+  <object-name>Magneto-</object-name> 
+  <visible>false</visible> 
+ <action>
+  <desc>Magneto decrease</desc> 
+  <button>0</button> 
+ <binding>
+  <command>property-adjust</command> 
+  <property>control/magneto</property> 
+  <step>-1</step> 
+  <min>0</min> 
+  <max>3</max> 
+  <wrap>false</wrap> 
+  </binding>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.Magneto_set()</script>
+   </binding>
+  </action>
+  </animation>
+  
+  <animation>
+  <type>pick</type> 
+  <object-name>Magneto+</object-name> 
+  <visible>false</visible> 
+  <action>
+  <desc>Magneto increase</desc> 
+  <button>0</button> 
+  <binding>
+  <command>property-adjust</command> 
+  <property>control/magneto</property> 
+  <step>1</step> 
+  <min>0</min> 
+  <max>3</max> 
+  <wrap>false</wrap> 
+  </binding>
+   <binding>
+      <command>nasal</command>
+      <script>scripts.Magneto_set()</script>
+   </binding>
+  </action>
+  </animation>
+
+
+
+</PropertyList>

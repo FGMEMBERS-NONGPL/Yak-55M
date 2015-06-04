@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <fx>
+
+<!-- Engine  -->
+  <crank>
+   <name>engstart1</name>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_start.wav</path>
+   <property>engines/engine[0]/cranking</property>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.4</offset>
+   </volume>
+  </crank>
+
+  <stop>
+   <name>engstop</name>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_shutd.wav</path>
+   <property>control/engstop</property>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.4</offset>
+   </volume>
+  </stop>
+  
+  
+  
+  <crank>
+   <name>crank1</name>
+   <mode>looped</mode>
+   <path>Sounds/cranking.wav</path>
+   <condition>
+    <property>engines/engine[0]/cranking</property>
+    <not>
+     <property>engines/engine[0]/running</property>
+    </not>
+   </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.5</offset>
+   </volume>
+  </crank>
+
+  <crank>
+   <name>cough1</name>
+   <path>Sounds/coughing.wav</path>
+   <property>engines/engine[0]/running</property>
+   <position>
+    <x>-2.50</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.3</offset>
+   </volume>
+  </crank>
+
+<engineI>
+   <name>engineI</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_I.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <or>
+   <property>controls/canopy/canopy-pos-norm</property>
+   <and>
+     <greater-than>	
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+     </less-than>
+	 </and>
+	 </or>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1445</value>
+   </less-than>
+    </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <type>inv</type>
+    <factor>735.3</factor>
+    <min>0.554</min>
+    <max>0.705</max>
+    <offset>-0.554</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.00134</factor>
+    <min>0.5</min>
+    <max>2.0</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineI>
+
+
+  <engineIL>
+   <name>engineIL</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_L.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <or>
+   <property>controls/canopy/canopy-pos-norm</property>
+   <and>
+     <greater-than>	
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+     </less-than>
+	 </and>
+	 </or>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1200</value>
+   </less-than>
+   </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.000339</factor>
+    <min>0.250</min>
+    <max>0.450</max>
+    <offset>-0.25</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.000882</factor>
+    <min>0.4</min>
+    <max>2.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineIL>
+
+
+<engineLH>
+   <name>engineLH</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_L.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <or>
+   <property>controls/canopy/canopy-pos-norm</property>
+   <and>
+     <greater-than>	
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+     </less-than>
+	 </and>
+	 </or>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1200</value>
+   </greater-than>
+    </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <type>inv</type>
+    <factor>735.3</factor>
+    <min>0.304</min>
+    <max>0.5</max>
+    <offset>-0.3</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.000882</factor>
+    <min>0.4</min>
+    <max>2.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineLH>
+
+
+  <engineH>
+   <name>engineH</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_H.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <or>
+   <property>controls/canopy/canopy-pos-norm</property>
+	<and>
+     <greater-than>	
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+     </greater-than>	 
+     <less-than>	 
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+     </less-than>	 
+     </and>
+	 </or>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1450</value>
+   </greater-than>
+   </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/mp-osi</property>
+    <factor>0.0286</factor>
+    <min>0.378</min>
+    <max>0.878</max>
+    <offset>-0.378</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.0005</factor>
+    <min>0.4</min>
+    <max>1.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineH>
+
+
+<!-- ============== Engine Canopy close ================ -->  
+ <engineIC>
+   <name>engineIC</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_I.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+    <not>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </not>
+   <or>   
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>9</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>10</value>
+	 </equals>
+   </or>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1445</value>
+   </less-than>
+    </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <type>inv</type>
+    <factor>368</factor>
+    <min>0.277</min>
+    <max>0.352</max>
+    <offset>-0.277</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.00134</factor>
+    <min>0.5</min>
+    <max>2.0</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineIC>
+
+
+  <engineILC>
+   <name>engineILC</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_L.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <not>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </not>
+   <or>   
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>9</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>10</value>
+	 </equals>
+   </or>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1200</value>
+   </less-than>
+   </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.00017</factor>
+    <min>0.125</min>
+    <max>0.225</max>
+    <offset>-0.125</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.000882</factor>
+    <min>0.4</min>
+    <max>2.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineILC>
+
+
+<engineLHC>
+   <name>engineLHC</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_L.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <not>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </not>
+   <or>   
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>9</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>10</value>
+	 </equals>
+   </or>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1200</value>
+   </greater-than>
+    </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/rpm</property>
+    <type>inv</type>
+    <factor>367.7</factor>
+    <min>0.152</min>
+    <max>0.25</max>
+    <offset>-0.15</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.000882</factor>
+    <min>0.4</min>
+    <max>2.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineLHC>
+
+
+  <engineHC>
+   <name>engineHC</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_H.wav</path>
+   <condition>
+   <property>engines/engine[0]/running</property>
+   <not>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </not>
+   <or>   
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>8</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>9</value>
+	 </equals>
+   	 <equals>
+     <property>sim/current-view/view-number</property>
+     <value>10</value>
+	 </equals>
+   </or>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1450</value>
+   </greater-than>
+   </condition>
+   <position>
+    <x>-2.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <property>engines/engine[0]/mp-osi</property>
+    <factor>0.0143</factor>
+    <min>0.189</min>
+    <max>0.439</max>
+    <offset>-0.189</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.0005</factor>
+    <min>0.4</min>
+    <max>1.5</max>
+    <offset>0.0</offset>
+   </pitch>
+  </engineHC>
+
+
+
+  <rumble>
+   <name>rumble</name>
+   <mode>looped</mode>
+   <path>Sounds/rumble.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <type>log</type>
+    <factor>0.15</factor>
+    <max>0.3</max>
+   </volume>
+  </rumble>
+
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+
+<!-- ========= Canopy ============= -->
+<canopy>
+ <name>canopy</name>
+ <mode>in-transit</mode>
+ <path>Aircraft/Yak-55M/Sounds/Yak-55M_canopy.wav</path>
+ <property>controls/canopy/canopy-pos-norm</property>
+ <volume>
+ <factor>0.12</factor>
+ </volume>
+   <position>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>0.50</z>
+   </position>
+</canopy>
+
+<click>
+ <name>canopyCrash</name>
+ <path>Aircraft/Yak-55M/Sounds/Yak-55M_canopy-crash.wav</path>
+   <condition>
+   <not>
+   <property>control/canopy-not-crash</property>
+   </not>
+ </condition>   
+ <volume>
+ <factor>1.0</factor>
+ </volume>
+   <position>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.80</z>
+   </position>
+</click>
+
+
+
+  <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_wind.wav</path>
+   <property>velocities/airspeed-kt</property>
+   <condition>
+    <not>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </not>
+ </condition>     
+   <volume>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.005</factor>
+     <min>0.03</min>
+     <max>0.35</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </wind>
+  
+  <windOpen>
+   <name>windOpen</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_wind.wav</path>
+   <property>velocities/airspeed-kt</property>
+   <condition>
+   <property>controls/canopy/canopy-pos-norm</property>
+   </condition>   
+ <volume>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.015</factor>
+     <min>0.1</min>
+     <max>1.00</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </windOpen>
+  
+
+  <stall>
+   <name>stall</name>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_stall.wav</path>
+   <condition>
+    <or>
+     <greater-than>
+      <property>fdm/jsbsim/aero/alpha-deg</property>
+      <value>18.0</value>
+     </greater-than>
+     <less-than>
+      <property>fdm/jsbsim/aero/alpha-deg</property>
+      <value>-18.0</value>
+     </less-than>
+    </or>
+   </condition>
+   <volume>
+     <offset>2.0</offset>
+   </volume>
+  </stall>
+
+  
+  <maxG>
+   <name>MaxMinG</name>
+   <mode>looped</mode>
+   <path>Aircraft/Yak-55M/Sounds/Yak-55M_maxG.wav</path>
+   <condition>
+    <or>
+     <greater-than>
+      <property>fdm/jsbsim/accelerations/n-pilot-z-norm</property>
+      <value>4</value>
+     </greater-than>
+   <less-than>
+    <property>fdm/jsbsim/accelerations/n-pilot-z-norm</property>
+    <value>-6.0</value>
+   </less-than>
+   </or>
+   </condition>
+ <volume>
+     <property>fdm/jsbsim/accelerations/n-pilot-z-norm</property>
+     <type>abs</type>	 
+     <factor>0.1</factor>
+     <min>0.1</min>
+     <max>1.0</max>
+   </volume>
+   <position>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>-0.50</z>
+   </position>
+  </maxG>
+
+  
+  
+  
+  
+  
+<!--  binding -->
+ <click>
+  <name>batMaster on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/electric/battery-switch</property>
+    </condition>
+ </click>
+ <click>
+  <name>batMaster off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/electric/battery-switch</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>Breaker generator on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/generator</property>
+    </condition>
+ </click>
+ <click>
+  <name>Breaker generator off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/generator</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>Breaker ignition on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/ign</property>
+    </condition>
+ </click>
+ <click>
+  <name>Breaker ignition off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/ign</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>instrBreaker on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/eng-instr-1</property>
+    </condition>
+ </click>
+ <click>
+  <name>instrBreaker off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/eng-instr-1</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>radioBreaker on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/nav-com-1</property>
+    </condition>
+ </click>
+ <click>
+  <name>radioBreaker off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/nav-com-1</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>Breaker SARPPH on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/sarpph</property>
+    </condition>
+ </click>
+ <click>
+  <name>Breaker SARPPH off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/sarpph</property>
+     </not>
+    </condition>
+  </click>
+
+ <click>
+  <name>Breaker smoke on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>control/smoke</property>
+    </condition>
+ </click>
+ <click>
+  <name>Breaker smoke off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>control/smoke</property>
+     </not>
+    </condition>
+  </click>
+
+  
+  
+  
+  
+ <click>
+  <name>pitotBreaker on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/circuit-breakers/pitot-heat</property>
+    </condition>
+ </click>
+ <click>
+  <name>pitotBreaker off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/circuit-breakers/pitot-heat</property>
+     </not>
+    </condition>
+  </click>
+
+
+ <click>
+  <name>Pump on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/engines/engine/pump</property>
+    </condition>
+  <volume>
+    <factor>0.5</factor>
+   </volume>
+  </click>
+ <click>
+  <name>Pump off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/engines/engine/pump</property>
+     </not>
+    </condition>
+  <volume>
+    <factor>0.3</factor>
+   </volume>
+  </click>
+
+ <click>
+  <name>Fuel on</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <property>controls/engines/engine/mixture</property>
+    </condition>
+ </click>
+ <click>
+  <name>Fuel off</name>
+   <path>Sounds/click.wav</path>
+    <condition>
+     <not>
+      <property>controls/engines/engine/mixture</property>
+     </not>
+    </condition>
+  </click>
+
+<magneto>
+ <name>mg</name>
+ <mode>once</mode>
+ <path>Sounds/click.wav</path>
+   <condition>
+   <or>
+     <equals>
+      <property>control/magneto</property>
+      <value>0</value>
+     </equals>
+     <equals>
+      <property>control/magneto</property>
+      <value>2</value>
+     </equals>
+	</or>
+   </condition>
+  </magneto>
+  
+<magneto1>
+ <name>mg1</name>
+ <mode>once</mode>
+ <path>Sounds/click.wav</path>
+   <condition>
+   <or>
+     <equals>
+      <property>control/magneto</property>
+      <value>1</value>
+     </equals>
+     <equals>
+      <property>control/magneto</property>
+      <value>3</value>
+     </equals>
+	</or>
+   </condition>
+ </magneto1>
+
+<sarpp>
+ <name>sarpp</name>
+ <mode>once</mode>
+ <path>Sounds/click.wav</path>
+   <condition>
+   <or>
+     <equals>
+      <property>control/sarpp</property>
+      <value>1</value>
+     </equals>
+     <equals>
+      <property>control/sarpp</property>
+      <value>-1</value>
+     </equals>
+	</or>
+   </condition>
+  </sarpp>
+ 
+<sarpp1>
+ <name>sarpp1</name>
+ <mode>once</mode>
+ <path>Sounds/click.wav</path>
+   <condition>
+     <equals>
+      <property>control/sarpp</property>
+      <value>0</value>
+     </equals>
+   </condition>
+  </sarpp1>
+ 
+  
+</fx>
+
+</PropertyList>
